@@ -4,11 +4,13 @@ import seaborn as sns
 import streamlit as st
 import os
 
+
 from babel.numbers import format_currency
 sns.set(style='dark')
-
+ 
 file_path = os.path.abspath("./all_data.csv")
 all_df = pd.read_csv(file_path)
+
 
 datetime_columns = ["date"]
 all_df.sort_values(by="date", inplace=True)
