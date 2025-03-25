@@ -2,20 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-import requests
-from io import StringIO
+import os
 
 from babel.numbers import format_currency
 sns.set(style='dark')
 
-def load_original_data():
-    url = 'https://github.com/johnardi/submission_analisis_data/blob/main/dashboard/all_data.csv'
-    response = requests.get(url)
-    if response.status_code == 200:
-        return pd.read_csv(StringIO(response.text))
-    else:
-        st.error("Failed to load data from GitHub.")
-        return None
+file_path = os.path.abspath("./all_data.csv")
+all_df = pd.read_csv(file_path)
 
 datetime_columns = ["date"]
 all_df.sort_values(by="date", inplace=True)
