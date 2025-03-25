@@ -9,8 +9,7 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 def load_original_data():
-    url = 'https://raw.githubusercontent.com/johnardi/submission_analisis_data/main/dashboard
-/all_data.csv'
+    url = 'https://github.com/johnardi/submission_analisis_data/blob/main/dashboard/all_data.csv'
     response = requests.get(url)
     if response.status_code == 200:
         return pd.read_csv(StringIO(response.text))
