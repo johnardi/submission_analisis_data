@@ -1,6 +1,8 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import streamlit as st
+import os
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+from babel.numbers import format_currency
+sns.set(style='dark')
