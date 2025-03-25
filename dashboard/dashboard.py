@@ -8,7 +8,7 @@ import os
 from babel.numbers import format_currency
 sns.set(style='dark')
  
-file_path = os.path.abspath("./all_data.csv")
+file_path = os.path.abspath("/mount/src/submission_analisis_data/dashboard/all_data.csv")
 all_df = pd.read_csv(file_path)
 
 
